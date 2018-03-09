@@ -871,13 +871,17 @@
     table#TableIndividual{
         z-index: 1000;
     }
+    #tbsection .x_panel,
+    #tbsection .x_panel .x_content,
+    #tbsection .x_panel .x_content .tabpanel,
+    #tbsection .x_panel .x_content .tabpanel .tab-content,
     #tbsection .x_panel .x_content .tabpanel .tab-content #TabIndividual{
-        height: 100%;
+        height: 100%;        
     }
-    #TabIndividual{
-        height: 100%;
+    #tbsection .x_panel .x_content .tabpanel .tab-content #TabIndividual{
         overflow-y: auto;
     }
+
 </style>
 
 <body>
