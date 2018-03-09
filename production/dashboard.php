@@ -878,7 +878,7 @@
         height: 100%;             
     }
     #tbsection .x_panel .x_content .tabpanel .tab-content #TabIndividual,
-    #tbsection .x_panel .x_content .tabpanel .tab-content#TabGrouped,
+    #tbsection .x_panel .x_content .tabpanel .tab-content #TabGrouped,
     #tbsection .x_panel .x_content .tabpanel .tab-content #TabMax{
         height: calc( 100% - 100px );
         overflow-y: auto;
