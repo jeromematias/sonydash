@@ -858,6 +858,9 @@
         height: 400px;
         border: 1px solid #000;
     }
+    #tbsection #performancecontent{
+        height: 100%;
+    }
 </style>
 
 <body>
