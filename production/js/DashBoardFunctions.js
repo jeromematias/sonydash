@@ -409,7 +409,7 @@ function GetTopUniquePrograms(TopProgramIndividualUnitID, TableIndex) {
         cache : false,
         success: function(data) {
             var sortNUmber = 0;                       
-            var output = '<table class="table table-bordered table-striped" id="TableIndividual"><thead><tr>' +
+            var output = '<thead><tr>' +
                 '<td>#</td>' +
                 '<td>Programme Title</td>' +
                 '<td>Date</td>';                
@@ -467,8 +467,8 @@ function GetTopUniquePrograms(TopProgramIndividualUnitID, TableIndex) {
                 }                
                 output += '</tr>';                
             }
-            output += '</body></table>'            
-            $("#tb-individual").html(output);                    
+            output += '</body>'            
+            $("#TableIndividual").html(output);                    
         }
     });
 }

@@ -1016,9 +1016,7 @@
                             <div class="alert alert-warning">
                                 <strong>Note : </strong><small id="alert-content"></small>
                             </div>
-                            <div class="table-responsive" id="tb-individual">
-                                
-                            </div>
+                            <table class="table table-bordered table-striped" id="TableIndividual"></table>
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="TabGrouped" aria-labelledby="profile-tab">
                             <table class="table table-bordered table-striped" id="TableGroup"></table>
