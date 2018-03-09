@@ -871,8 +871,7 @@
     table#TableIndividual{
         z-index: 1000;
     }
-    #tb-individual{
-        height: 100%;
+    .tab-content{
         overflow-y: auto;
     }
 </style>
