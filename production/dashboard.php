@@ -871,6 +871,9 @@
     table#TableIndividual{
         z-index: 1000;
     }
+    #tb-individual{
+        overflow-y: scroll;
+    }
 </style>
 
 <body>
@@ -952,7 +955,7 @@
         <div class="x_panel">
             <div id="ratingstitle"><small id="">Ratings Performance</small></div>
             <div class="x_content">
-                <div id="performancecontent"></div>
+                <div id="performancecontent table-responsive"></div>
             </div>
         </div>
     </div>
