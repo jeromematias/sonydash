@@ -1144,7 +1144,8 @@
     var ratingsDefaultHeight = document.getElementById("performancecontent").offsetHeight;
     var GraphDefaultWidth = document.getElementById("bargraph").offsetWidth;
     var ratingsWidth = 0;
-
+    var $table = $('table#TableIndividual');
+    $table.floatThead();
     $(document).ready(function() {
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             window.location.replace('../scripps_mobile/dashboard/index.php')

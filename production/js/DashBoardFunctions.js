@@ -467,9 +467,7 @@ function GetTopUniquePrograms(TopProgramIndividualUnitID, TableIndex) {
                 }                
                 output += '</tr>';                
             }            
-            $("#TableIndividual").html(output);
-            var $table = $('table#TableIndividual');
-            $table.floatThead();            
+            $("#TableIndividual").html(output);                        
         }
     });
 }
