@@ -868,6 +868,9 @@
         overflow-y: auto;
         overflow-x: hidden;
     }
+    table#TableIndividual{
+        z-index: 1000;
+    }
 </style>
 
 <body>
