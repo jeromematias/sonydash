@@ -861,6 +861,10 @@
     #tbsection .x_panel{
         height: 100%;
     }
+    #tbsection .x_panel .x_content .tabpanel{
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
 </style>
 
 <body>
