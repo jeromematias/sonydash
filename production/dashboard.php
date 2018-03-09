@@ -881,7 +881,22 @@
         height: calc( 100% - 100px );
         overflow-y: auto;
     }
+    #TabIndividual::-webkit-scrollbar-track
+    {
+      background-color: #F5F5F5;
+    }
 
+    #TabIndividual::-webkit-scrollbar
+    {
+      width: 8px;
+      background-color: #F5F5F5;
+    }
+
+    #TabIndividual::-webkit-scrollbar-thumb
+    {
+
+      background-color: #888;
+    }
 </style>
 
 <body>
