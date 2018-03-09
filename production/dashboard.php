@@ -874,12 +874,13 @@
     #tbsection .x_panel,
     #tbsection .x_panel .x_content,
     #tbsection .x_panel .x_content .tabpanel,
-    #tbsection .x_panel .x_content .tabpanel .tab-content,
-    #tbsection .x_panel .x_content .tabpanel .tab-content #TabIndividual{
-        height: 100%;        
+    #tbsection .x_panel .x_content .tabpanel .tab-content{
+        height: 100%;             
     }
     #tbsection .x_panel .x_content .tabpanel .tab-content #TabIndividual{
+        height: calc( 100% - 20px );
         overflow-y: auto;
+
     }
 
 </style>
