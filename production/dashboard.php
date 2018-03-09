@@ -931,7 +931,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6" id="tbsection">
         <div class="x_panel">
             <div id="ratingstitle"><small id="">Ratings Performance</small></div>
             <div class="x_content">
@@ -939,7 +939,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6" id="tbsection">
         <div class="x_panel">
             <div id="ratingstitle"><small id="topProgTitle">Top 10 Programmes</small></div>
             <div class="x_content">
