@@ -443,7 +443,7 @@ function GetTopUniquePrograms(TopProgramIndividualUnitID, TableIndex) {
                     }
                 }                
                 
-                '</tr></thead>';                
+                '</tr></thead><body>';                
             for (var i in data) {
                 output += '<tr><td>' + Number(Number(i) + Number(1)) + '</td>';
                 output += '<td>' + data[i].ProgTitle + '</td>';
@@ -465,7 +465,7 @@ function GetTopUniquePrograms(TopProgramIndividualUnitID, TableIndex) {
                         }
                     }
                 }                
-                output += '</tr>';                
+                output += '</tr></body>';                
             }            
             $("#TableIndividual").html(output);                        
         }
