@@ -872,6 +872,7 @@
         z-index: 1000;
     }
     #TabIndividual{
+        height: 200px;
         overflow-y: auto;
     }
 </style>
