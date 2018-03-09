@@ -982,7 +982,9 @@
                             <div class="alert alert-warning">
                                 <strong>Note : </strong><small id="alert-content"></small>
                             </div>
-                            <table class="table table-bordered table-striped" id="TableIndividual"></table>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped" id="TableIndividual"></table>
+                            </div>
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="TabGrouped" aria-labelledby="profile-tab">
                             <table class="table table-bordered table-striped" id="TableGroup"></table>
