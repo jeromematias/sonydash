@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../favicon.ico">
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+
+    <!-- bootstrap multi-select-->
+    <link rel="stylesheet" type="text/css" href="../dist/css/bootstrap-multiselect.css">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <style>
+    html,body{
+      font-family: 'lucida sans', 'trebuchet MS', 'Tahoma';
+    }
+    ul.nav li{
+      padding: 0 10px 0 10px;
+      color: #555
+    }
+    ul.nav li label, ul.nav li label select{
+      width: 100%;
+    }
+    ul.nav li select{
+      color: #555;
+      background-color: #fff;
+      background-image: none;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+              box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+      -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+           -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+              transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+              height: 40px;
+    }
+  </style>
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Scripps Dashboard</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><label>Area<select id="area" name="area" class="input-sm"></label></select></li>
+            <li>
+              <label class="selectlbl"> Period Type
+                <select id="periodtype" name="periodtype" class="input-sm">
+                  <option value="1" selected="selected">Week</option>
+                  <option value="2">Month</option>
+                  <option value="3">Quarter</option>
+                  <option value="4">Year</option>
+                </select>
+              </label></li>
+            <li>
+              <label class="selectlbl"> Target
+                <select id="target" name="target" class="input-sm" onchange="initializedNavigation()"></select>
+              </label>
+            </li>
+            <li>
+              <label class="selectlbl"> Reference
+                <select id="refperiod" name="refperiod" class="input-sm" onchange="initializedNavigation()"></select>
+              </label>
+            </li>
+            <li>
+              <label class="selectlbl" id="periodrange"> Period
+                <select id="period" name="period" class="input-sm" onchange=""></select>                                                       
+              </label>
+            </li>
+            <li>
+              <label class="selectlbl"> Day Part
+                <select id="dpart" name="dpart" class="input-sm" onchange="initializedNavigation()">
+                  <option value="0">All day</option>
+                  <option value="1">Primetime</option>                                        
+                </select>
+              </label>
+            </li>
+            <li>
+              <label class="selectlbl"> Unit type
+                <select id="unittype" name="unittype" class="form-control input-sm" onchange="initializedNavigation()">
+                  <option value="1">000</option>
+                  <option value="2">TRP</option>
+                  <option value="3">Share</option>
+                  <option value="4">Reach000</option>
+                  <option value="5">Reach%</option>
+                </select>
+              </label>
+            </li>
+            <li>
+              <label class="selectlbl2"> Channel Brand</label>
+              <select id="channelbrand1" multiple="multiple"></select>
+            </li>
+            <li>
+              <label class="radioselectlbl">Ref. Format
+                <div id="radiobuttons">
+                  <input type="radio" name="trpvalue" id="ValueFormatPercent" checked="checked" value="%" onclick="initializedNavigation()">%
+                  <input type="radio" name="trpvalue" id="number" value="123" onclick="initializedNavigation()">123
+                </div>                            
+              </label>
+            </li>            
+            <li>
+              <label class="radioselectlbl">Top Prorammes format
+                <div id="radiobuttons">
+                  <input type="radio" name="progValues" id="programmes" checked="checked" value="P" onclick="initializedNavigation()">P
+                  <input type="radio" name="progValues" id="competitive" value="C" onclick="initializedNavigation()">C
+                </div>                            
+              </label>
+            </li>
+          </ul>          
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="performancecontent" class="col-sm-12">sads</div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../dist/js/bootstrap-multiselect.js"></script>
+    <script>
+      $(document).ready(function(){        
+        $('#channelbrand1').multiselect({         
+            buttonWidth: '700px'
+        });
+        InitializeDashboardInpouts();
+      });
+      var WeeksPeriod = [], MonthsPeriod = [], QuartersPeriod = [], YearsPeriod = [], magicType = 'bar', GetWeekRanges = [], DaypartGroup = [];
+      var topprogUnits = document.getElementById('topprogUnits');
+      var TemporaryTabIndex = 0;
+      var lastDate = '';
+      $.ajaxSetup({
+          cache : false
+      })
+      var GetLastDates = [];
+      $('#area').on('change', function() {
+          initializedNavigation();
+      });
+      $('#periodtype').on('change', function() {
+          InitPeriods();    
+      });
+      $('#channelbrand1').multiselect({         
+              buttonWidth: '200px'
+          });
+      $('#refperiod').on('change',function(){
+          //alert($('#refperiod').val());
+      })
+      $('#topprogUnits').multiselect({         
+          buttonWidth: '100px'
+      });
+      $('#period').on('change',function(){
+          if($('#periodtype').val() == 4){
+              var myElement = $('select[name="period"]');
+              var latestPeriod = $(myElement).find("option:first-child").val();
+              $('#refperiod').find('option').remove();
+              if($('#period').val() == latestPeriod){                
+                  var selectBox = document.getElementById('refperiod');                
+                  selectBox.options.add(new Option(1+" Year", 1));
+                  selectBox.options.add(new Option("Same Avail. Dates Last Year", "-1")); 
+              }else{                        
+                  var selectBox = document.getElementById('refperiod');                
+                  selectBox.options.add(new Option(1+" Year", 1));         
+              }
+          }
+          initializedNavigation();    
+      })
+      function disableOptions(periodtype) {
+        $('#refperiod').find('option').remove();
+        if (periodtype == '4') {                    
+            var selectBox = document.getElementById('refperiod');                
+            selectBox.options.add(new Option(1+" Year", 1));
+            selectBox.options.add(new Option("Same Avail. Dates Last Year", "-1"));                 
+        }else if (periodtype == '3') {
+                 
+            var selectBox = document.getElementById('refperiod');                
+            selectBox.options.add(new Option(1+" Quarter", 1)); 
+            selectBox.options.add(new Option(4+" Quarters", 4)); 
+            selectBox.options.add(new Option(8+" Quarters", 8));
+
+            document.getElementById("refperiod").options[0].selected = true;
+        }else if (periodtype == '2') {       
+                      
+            var selectBox = document.getElementById('refperiod');                
+            selectBox.options.add(new Option(1+" month", 1)); 
+            selectBox.options.add(new Option(4+" months", 4)); 
+            selectBox.options.add(new Option(8+" months", 8));
+            selectBox.options.add(new Option(12+" months", 12));
+
+            document.getElementById("refperiod").options[0].selected = true; 
+        }else if (periodtype == '1') {
+                        
+            var selectBox = document.getElementById('refperiod');                
+            selectBox.options.add(new Option(1+" Week", 1)); 
+            selectBox.options.add(new Option(4+" Weeks", 4)); 
+            selectBox.options.add(new Option(8+" Weeks", 8));
+            selectBox.options.add(new Option(12+" Weeks", 12));
+
+            document.getElementById("refperiod").options[1].selected = true;   
+        }
+        //getPeriodDate(GetWeekNum($('#period').val()),GetYearNum($('#period').val()),periodtype);
+        var PeriodTypeObj = document.getElementById('periodtype');
+        if(localStorage["PeriodTypeID"] != 4){
+            selectBox = document.getElementById('refperiod');
+            selectBox.options.add(new Option('Same ' + PeriodTypeObj.options[PeriodTypeObj.selectedIndex].text +' Last Year',-1));      
+        }
+      }
+      function InitializeDashboardInpouts(){         
+          $.ajax({
+              url: "init_all.php",
+              cache : false        
+          })
+          .done(function(data){                  
+                  $('#area').find('option').remove();            
+                  var selectBox = document.getElementById('area'); 
+                  for (var i in data.RegionID) {
+                      selectBox.options.add(new Option(data.RegionID[i].Regionname, data.RegionID[i].RegionIDs));
+                  }
+
+                  $('#target').find('option').remove();            
+                  selectBox = document.getElementById('target');           
+                  for (var i in data.TargetGroups) {
+                      selectBox.options.add(new Option(data.TargetGroups[i].GroupName, data.TargetGroups[i].GroupName));
+                  }                    
+                  for (var i in data.GetWeeks) {                
+                      WeeksPeriod.push([data.GetWeeks[i].Weeks]);
+                  }
+                  for (var i in data.GetMonths) {
+                      MonthsPeriod.push([data.GetMonths[i].Months]);
+                  }
+                  for (var i in data.GetQuarters) {
+                      QuartersPeriod.push([data.GetQuarters[i].Quarters]);
+                  }
+                  for (var i in data.GetYears) {
+                      YearsPeriod.push([data.GetYears[i].Years]);
+                  }
+                  $('#dpart').find('option').remove();            
+                  selectBox = document.getElementById('dpart');            
+                  for (var i in data.GetDaypartGroups) {
+                      selectBox.options.add(new Option(data.GetDaypartGroups[i].DaypartGroupName, data.GetDaypartGroups[i].DaypartGroupID));
+                  }
+
+                  for (var i in data.GetLastDates){
+                      GetLastDates.push({'RegionID':data.GetLastDates[i].RegionID, 'RegionLastDate':data.GetLastDates[i].RegionLastDate, 'AreaID':data.GetLastDates[i].AreaID, 'AreaLastDate':data.GetLastDates[i].AreaLastDate});
+                  }            
+
+                  var ChannelBrandIDs = [];
+                  $('#channelbrand1').find('option').remove();            
+                  for (var i in data.ChannelBrands) {                
+                      ChannelBrandIDs.push({label: data.ChannelBrands[i].ChannelBrandName,value: data.ChannelBrands[i].ChannelBrandID,selected:true});
+                  }        
+                
+                  $("#channelbrand1").multiselect('dataprovider', ChannelBrandIDs);
+                  $('#channelbrand1').multiselect('rebuild');             
+                  
+                  //GetWeekRanges $GetWeekRanges[] = array('RegionIDs'=>$row[0],'AreaID'=>$row[1],'MinWeekNumber'=>$row[2],'MaxWeekNumber'=>$row[3]);
+
+                  for(var i in data.GetWeekRanges){
+                      GetWeekRanges.push({'RegionID':data.GetWeekRanges[i].RegionIDs,'AreaID':data.GetWeekRanges[i].AreaID,'MinWeekNumber':data.GetWeekRanges[i].MinWeekNumber,'MaxWeekNumber':data.GetWeekRanges[i].MaxWeekNumber});               
+                  }
+                  
+                  localStorage["TopProgramTableIndex"]=1;
+                  localStorage["TrendingTableIndex"]=1;
+                  localStorage["TopProgramGroupUnitID"] = 2;
+                  localStorage["TopProgramIndividualUnitID"] = 2;
+                  localStorage["TopProgramMaxUnitID"] = 2;
+                  localStorage["CompetitiveUnitID"] = 1;            
+                  InitPeriods();
+                              
+          })
+          .fail(function() {
+              alert("Ajax failed to fetch data");
+          });      
+      }
+      function InitPeriods(){
+        localStorage["RegionID"] = $('#area').val();    
+        localStorage["PeriodTypeID"] = $('#periodtype').val();    
+        $('#period').find('option').remove();            
+        var selectBox = document.getElementById('period');                
+        if(localStorage["PeriodTypeID"] == 1){
+            for (var i in WeeksPeriod) {            
+                selectBox.options.add(new Option(WeeksPeriod[i], WeeksPeriod[i]));                    
+            }        
+        }else if(localStorage["PeriodTypeID"] == 2){
+            for (var i in MonthsPeriod) {
+                selectBox.options.add(new Option(MonthsPeriod[i], MonthsPeriod[i]));                    
+            }
+        }else if(localStorage["PeriodTypeID"] == 3){
+            for (var i in QuartersPeriod) {
+                selectBox.options.add(new Option(QuartersPeriod[i], QuartersPeriod[i]));                    
+            }
+        }else if(localStorage["PeriodTypeID"] == 4){
+            for (var i in YearsPeriod) {
+                selectBox.options.add(new Option(YearsPeriod[i], YearsPeriod[i]));                    
+            }
+        }
+        disableOptions(localStorage["PeriodTypeID"]);                
+        initializedNavigation();    
+      }
+      function initializedNavigation() {
+        getPeriodDate(GetWeekNum($('#period').val()),GetYearNum($('#period').val()),$('#periodtype').val());
+        localStorage['cellid'] = '';
+        var PeriodTypeObj = document.getElementById('periodtype');
+        localStorage["PeriodTypeID"] = PeriodTypeObj[PeriodTypeObj.selectedIndex].value;
+
+        var PeriodNumberObj = document.getElementById('period');
+        localStorage["PeriodNumber"] = PeriodNumberObj[PeriodNumberObj.selectedIndex].value;
+        var Periods = [];
+        GetPeriods(localStorage["PeriodNumber"], Periods);
+        
+        var selectedIndex = Periods.indexOf(Number(localStorage["PeriodNumber"]));     
+        if(selectedIndex == -1){
+            selectedIndex = 0;
+        }
+        var ReeferencePeriodObj = document.getElementById('refperiod');
+        if($('#refperiod').val() != -1){
+            var PeriodStartIndex = Number(selectedIndex) + Number(1);
+            var PeriodEndIndex = Number(selectedIndex) + Number(ReeferencePeriodObj[ReeferencePeriodObj.selectedIndex].value) + Number(1);        
+            var Minvalue = Math.min(Periods.length, PeriodEndIndex);
+            var ReferencePeriods = '';
+            for (var i = PeriodStartIndex; i < Minvalue; i++) {
+                if (ReferencePeriods.length === 0) {
+                    ReferencePeriods += Periods[i];
+                } else {
+                    ReferencePeriods += ',' + Periods[i];
+                }
+            }
+            localStorage["ReferencePeriods"] = ReferencePeriods;
+        }else{
+            if($('#periodtype').val() != 4){
+                var RefPeriods = [];        
+                GetSamePeriodLastYear(localStorage['PeriodNumber'],RefPeriods);
+                localStorage["ReferencePeriods"] = RefPeriods;
+            }else{
+                localStorage["ReferencePeriods"] = '-1';
+            }
+        }        
+        
+        PeriodStartIndex = Number(selectedIndex);
+        if (localStorage["PeriodTypeID"] == 1) //week
+        {
+            PeriodEndIndex = Number(selectedIndex) + Number(12);
+        } else if (localStorage["PeriodTypeID"] == 2) //month
+        {
+            PeriodEndIndex = Number(selectedIndex) + Number(12);
+        } else if (localStorage["PeriodTypeID"] == 3) //quarter
+        {
+            PeriodEndIndex = Number(selectedIndex) + Number(4);
+        } else if (localStorage["PeriodTypeID"] == 4) //year
+        {
+            PeriodEndIndex = Number(selectedIndex) + Number(1);
+        }
+        Minvalue = Math.min(Periods.length, PeriodEndIndex);
+        var TrendingCurrentPeriods = '';
+        for (var i = PeriodStartIndex; i < Minvalue; i++) {
+            if (TrendingCurrentPeriods.length === 0) {
+                TrendingCurrentPeriods += Periods[i];
+            } else {
+                TrendingCurrentPeriods += ',' + Periods[i];
+            }
+        }
+        localStorage["TrendingCurrentPeriods"] = TrendingCurrentPeriods;
+
+
+        if (localStorage["PeriodTypeID"] == 1) //week
+        {
+            PeriodStartIndex = Number(selectedIndex) + Number(52);
+            PeriodEndIndex = Number(PeriodStartIndex) + Number(12);
+        } else if (localStorage["PeriodTypeID"] == 2) //month
+        {
+            PeriodStartIndex = Number(selectedIndex) + Number(12);
+            PeriodEndIndex = Number(PeriodStartIndex) + Number(12);
+        } else if (localStorage["PeriodTypeID"] == 3) //quarter
+        {
+            PeriodStartIndex = Number(selectedIndex) + Number(4);
+            PeriodEndIndex = Number(PeriodStartIndex) + Number(4);
+        } else if (localStorage["PeriodTypeID"] == 4) //year
+        {
+            PeriodStartIndex = Number(selectedIndex) + Number(1);
+            PeriodEndIndex = Number(PeriodStartIndex) + Number(1);
+        }
+        Minvalue = Math.min(Periods.length, PeriodEndIndex);
+        var TrendingPreviousPeriods = '';
+        for (var i = PeriodStartIndex; i < Minvalue; i++) {
+            if (TrendingPreviousPeriods.length === 0) {
+                TrendingPreviousPeriods += Periods[i];
+            } else {
+                TrendingPreviousPeriods += ',' + Periods[i];
+            }
+        }
+        localStorage["TrendingPreviousPeriods"] = TrendingPreviousPeriods;
+
+        var TargetGroupObj = document.getElementById('target');
+        localStorage["TargetGroupName"] = TargetGroupObj[TargetGroupObj.selectedIndex].value;
+
+        var ChannelBrandIDs = ''
+        var ChannelBrandObj = document.getElementById('channelbrand1');
+        for (var i = 0; i < ChannelBrandObj.length; i++) {
+            if (ChannelBrandObj[i].selected) {
+                if (ChannelBrandIDs.length === 0) {
+                    ChannelBrandIDs += ChannelBrandObj[i].value;
+                } else {
+                    ChannelBrandIDs += ',' + ChannelBrandObj[i].value;
+                }
+            }
+        }
+
+        localStorage["ChannelBrandIDs"] = ChannelBrandIDs;
+
+        var UnitTypeObj = document.getElementById('unittype');
+        localStorage["UnitID"] = UnitTypeObj[UnitTypeObj.selectedIndex].value;
+        localStorage["UnitText"] = UnitTypeObj[UnitTypeObj.selectedIndex].text;
+
+        
+
+        localStorage["ValueFormatPercent"] = 0;
+        var ValueFormatPercentObj = document.getElementById('ValueFormatPercent');
+        if (ValueFormatPercentObj.checked) {
+            localStorage["ValueFormatPercent"] = 1;
+        }
+
+
+        var dpartIDObj = document.getElementById('dpart');
+        localStorage["isPrimeTime"] = dpartIDObj[dpartIDObj.selectedIndex].value;
+        localStorage["InputDaypartGroupID"] = $('#dpart').val();
+        ratings(localStorage["TargetGroupName"], localStorage["ChannelBrandIDs"], localStorage["UnitID"], localStorage["PeriodTypeID"], localStorage["PeriodNumber"], localStorage["ReferencePeriods"], localStorage["InputDaypartGroupID"],$('#area').val());    
+      }
+      function ratings(targetgroupname, channelbrandid, unitid, periodtypeid, periodnumber, refperiods, InputDaypartGroupID,RegionID) {
+        //AppendDateLine(RegionID);            
+        alert("RatingPerformance.php?version="+ $.now() +"&targetgroupname=" + targetgroupname + "&channelbrandid=" + channelbrandid + "&unitid=" + unitid + "&periodtypeid=" + periodtypeid + "&periodnumber=" + periodnumber + "&refperiods=" + refperiods + "&InputDaypartGroupID=" + localStorage["InputDaypartGroupID"] + "&RegionID=" + RegionID)
+        $.ajax({
+            url: "RatingPerformance.php?version="+ $.now() +"&targetgroupname=" + targetgroupname + "&channelbrandid=" + channelbrandid + "&unitid=" + unitid + "&periodtypeid=" + periodtypeid + "&periodnumber=" + periodnumber + "&refperiods=" + refperiods + "&InputDaypartGroupID=" + localStorage["InputDaypartGroupID"] + "&RegionID=" + RegionID,
+            type: "GET",
+            cache : false
+        })
+        .done(function(data) {            
+            var expotRows = [];
+            for (var i in data) {
+                expotRows.push([data[i].areaid, data[i].AreaName, data[i].CountryCode, data[i].ChannelBrandID, data[i].ChannelBrandName, data[i].DemographicID, data[i].TargetCode, data[i].CurrentValue, data[i].ReferenceValue]);
+            }
+            var output = '';
+            var C = {},
+                A = {},
+                R = {},
+                ChannelBrandIDs = [],
+                ChannelBrandNames = [],
+                AreaIDs = [],
+                RegionIDs = [];
+            for (var k = 0; k < data.length; k++) {                
+                if(data[k].areaid == -1){
+                    if (!R[data[k].RegionID]) {
+                        R[data[k].RegionID] = true;
+                        RegionIDs.push(data[k].RegionID);                  
+                    }
+                }else{
+                    if (!A[data[k].areaid]) {
+                        A[data[k].areaid] = true;
+                        AreaIDs.push(data[k].areaid);
+                    }
+                }                
+            }
+
+            var ChannelBrandObj = document.getElementById('channelbrand1');
+            for (var i = 0; i < ChannelBrandObj.length; i++) {
+                if (ChannelBrandObj[i].selected) {
+                    ChannelBrandIDs.push(ChannelBrandObj[i].value);
+                    ChannelBrandNames.push(ChannelBrandObj[i].text);
+                }                
+            }
+
+            if (data.length > 0) {
+                k = 0;
+                var found = false;
+                for (var i = 0; i < AreaIDs.length; i++)
+                    for (var j = 0; j < ChannelBrandIDs.length; j++)
+                        if ((localStorage["AreaID"] == AreaIDs[i]) && (localStorage["ChannelBrandID"] == ChannelBrandIDs[j])) {
+                            found = true;
+                            break;
+                        }
+                if (!found) {
+                    localStorage["AreaID"] = data[k].areaid;
+                    localStorage["AreaName"] = data[k].AreaName;
+                    localStorage["ChannelID"] = data[k].ChannelID;
+                    localStorage["DemographicID"] = data[k].DemographicID;
+                    localStorage["ChannelBrandID"] = data[k].ChannelBrandID;
+                    localStorage["TargetCode"] = data[k].TargetCode;
+                    localStorage["ChannelBrandName"] = data[k].ChannelBrandName;
+                    localStorage["CountryCode"] = data[k].CountryCode;
+                    localStorage["IsRegionRow"] = data[k].IsRegionRow;
+                    localStorage["RegionID"] = data[k].RegionID;                                       
+                }
+            }
+
+            output += '<table id="RatingsTable" class="table table-bordered"><tr><th><img id="globe" src="icons/globe/globe-icon.png"></th>';
+            var ExportRows = [];
+            for (var j = 0; j < ChannelBrandNames.length; j++) {
+                if (ChannelBrandNames[j] == 'HGTV/*FL') {
+                    output += '<th><img id="logo" src="icons/Channel logos/HGTV.png" /></th>';
+                } else {
+                    output += '<th><img id="logo" src="icons/Channel logos/' + ChannelBrandNames[j].split(' ').join('_') + '.png" /></th>';
+                }
+            }
+            output += '</tr>';
+            
+            var PercentTag = '';
+            if($('#periodtype').val() == 4){
+                var stringstart = refperiods.length - 4;
+                var maxrefperiods = refperiods.substring(0,4);
+            }else{
+                var stringstart = refperiods.length - 6;
+                var maxrefperiods = refperiods.substring(0,6);
+            }
+            
+            if($('#periodtype').val() != 3){
+                var minrefperiods = refperiods.substring(stringstart, refperiods.length);
+            }else{
+                maxrefperiods = quarterEnd(refperiods.substring(0,6));
+                var minrefperiods = quarterStart(refperiods.substring(stringstart, refperiods.length));
+            }
+            //alert(maxrefperiods);                    
+            var MinDateNumber = '', MaxDateNumber = '';            
+            if (localStorage["UnitID"]==2 || localStorage["UnitID"]==3 )
+              PercentTag = '%';                     
+            var DeductCurrentRefValue = [];
+ 
+            var GlobalFlags = [];
+            for(var i in ChannelBrandIDs){
+                GlobalFlags.push({channelBrandID:ChannelBrandIDs[i],RowCount:AreaIDs.length});
+            }                    
+            for (var i = 0; i < AreaIDs.length; i++) {
+                var EachRow = '';
+                for (var j = 0; j < ChannelBrandIDs.length; j++) {
+                    var EachChannel = '';
+                    for (var k = 0; k < data.length; k++) {
+                        var AreaID = AreaIDs[i];
+                        var ChannelBrandID = ChannelBrandIDs[j];
+                        if ((EachRow.length === 0) && (data[k].areaid == AreaID)) {
+                            var flagname = data[k].AreaName.split(' ').join('_');
+                            if(data[k].IsRegionRow == 0){
+                                EachRow += '<td class="1"><img id="flag" src="icons/Country flags/flag_' + flagname + '.png"/>' + data[k].CountryCode + '<small>' + data[k].TargetCode + '</small></td>';
+                            }                                                            
+                        }
+
+                        if ((data[k].areaid == AreaID) && (data[k].ChannelBrandID == ChannelBrandID)){
+                            EachChannel = 'found';
+                            if(data[k].IsRegionRow == 0){
+                                if (localStorage["ValueFormatPercent"] == 1) {
+                                var Percent = '';
+
+                                for(var g in GetWeekRanges){
+                                    if(data[k].areaid == GetWeekRanges[g].AreaID && data[k].RegionID == GetWeekRanges[g].RegionID){                                        
+                                        if($('#periodtype').val() == 1){
+                                            MinDateNumber = GetWeekRanges[g].MinWeekNumber;
+                                            MaxDateNumber = GetWeekRanges[g].MaxWeekNumber;
+                                        }else{                                            
+                                            MaxDateNumber = GetWeekRanges[g].MaxWeekNumber;
+                                            MinDateNumber = GetMaxMinDate(GetYearNum(GetWeekRanges[g].MinWeekNumber),GetWeekNum(GetWeekRanges[g].MinWeekNumber),$('#periodtype').val(),'min');
+                                            MaxDateNumber = GetMaxMinDate(GetYearNum(GetWeekRanges[g].MaxWeekNumber),GetWeekNum(GetWeekRanges[g].MaxWeekNumber),$('#periodtype').val(),'max');                                                                                   
+                                        } 
+                                    }
+                                }
+                                if($('#periodType').val() != 4 && $('#refperiod').val() != -1){
+                                    classifyMin = (MinDateNumber > minrefperiods) ? "yes" : "no";
+                                    classifyMax = (maxrefperiods > MaxDateNumber) ? "yes" : "no";
+                                }else{
+                                    classifyMin = 'no';
+                                    classifyMax = 'no';
+                                }                                
+                                
+                                //alert(minrefperiods + "/" + MinDateNumber + "/" + maxrefperiods + "/" + MaxDateNumber);                                
+                                if (data[k].ReferenceValue == 0 || (classifyMin == "yes" || classifyMax == "yes")){
+                                    if(data[k].CurrentValue == 0){
+                                        Percent = '-';                                        
+                                    }else{
+                                        if($('#unittype').val() == 4){
+                                            var unitDecimal = 0;
+                                        }else{
+                                            var unitDecimal = 3;
+                                        }
+                                        var dataCurrent = parseFloat(data[k].CurrentValue.replace(/,/g, ''));
+                                        Percent = dataCurrent.toFixed(unitDecimal) +PercentTag+ ' (N/A)*';
+                                    }                                    
+                                } else {
+                                    var percentvalue = ((parseFloat(data[k].CurrentValue.replace(/,/g, '')) - parseFloat(data[k].ReferenceValue.replace(/,/g, ''))) / parseFloat(data[k].ReferenceValue.replace(/,/g, ''))) * 100;                                    
+                                    var dataCurrent = parseFloat(data[k].CurrentValue.replace(/,/g, ''));
+                                    var dataReference = parseFloat(data[k].ReferenceValue.replace(/,/g, ''));
+                                    var decimalNum = 1;
+                                    var unitDecimal = 3;
+                                    if($('#unittype').val() == 4){
+                                        unitDecimal = 0;
+                                    }
+                                    //alert($('#period').val() > MaxDateNumber ? "yes" : "no");
+                                    if( $('#periodType').val() != 4 && $('#refperiod').val() != -1 ){
+                                        classifyMin = (MinDateNumber > minrefperiods) ? "yes" : "no";                                    
+                                        if($('#periodtype').val() != 1){
+                                            classifyNA = GetMaxMinDate(GetYearNum($('#period').val()),GetWeekNum($('#period').val()),$('#periodtype').val(),'max') > MaxDateNumber ? "yes" : "no";
+                                            //alert(GetMaxMinDate(GetYearNum($('#period').val()),GetWeekNum($('#period').val()),$('#periodtype').val(),'max') + "/" + MaxDateNumber + "/" + classifyNA);                                        
+                                        }else{
+                                            classifyNA = $('#period').val() > MaxDateNumber ? "yes" : "no";
+                                            //alert($('#period').val() + "/" + MaxDateNumber + "/" + classifyNA);
+                                        }
+                                    }else{
+                                        classifyMin = 'no';
+                                        classifyNA = 'no';
+                                    }                                    
+                                    //alert(classifyMin)
+                                    if(classifyMin == "yes" || classifyNA == "yes"){
+                                        Percent = '(N/A)!';
+                                        DeductCurrentRefValue.push({id:data[k].ChannelBrandID,CurrentValue:data[k].CurrentValue,ReferenceValue:data[k].ReferenceValue});
+
+                                    }else{
+                                        if (percentvalue > 0) {
+                                            Percent = '<table id="hiddenTable"><tr><td>'+ dataCurrent.toFixed(unitDecimal) +PercentTag+ '</td><td>&#09;<img id="arrow_up" src="icons/bullets/arrow_up.png"/></td><td>' + percentvalue.toFixed(decimalNum) + '%</td></tr></table>';
+                                        } else {
+                                            Percent = '<table id="hiddenTable"><tr><td>'+ dataCurrent.toFixed(unitDecimal) +PercentTag+ '</td><td>&#09;<img id="arrow_down" src="icons/bullets/arrow_down.png"/></td><td>' + percentvalue.toFixed(decimalNum) + '%</td></tr></table>';
+                                        }
+                                        for(var globalid in GlobalFlags){
+                                            //GlobalFlags.push({channelBrandID:ChannelBrandIDs[i],RowCount:AreaIDs.length});
+                                            if(GlobalFlags[globalid].channelBrandID == data[k].ChannelBrandID){
+                                                var tempRowCout = GlobalFlags[globalid].RowCount;
+                                                GlobalFlags[globalid].RowCount = tempRowCout - 1;                                                
+                                            }
+                                        }
+                                    }                                                                                                            
+
+                                }
+                                //GetWeekRanges $GetWeekRanges[] = array('RegionIDs'=>$row[0],'AreaID'=>$row[1],'MinWeekNumber'=>$row[2],'MaxWeekNumber'=>$row[3]);                                                                
+                                //alert(minrefperiods+"/"+MinDateNumber+"-----"+$('#period').val()+"/"+MaxDateNumber);
+                                if(Percent == '-'){
+                                    EachRow += '<td><table id="hiddenTable"><tr><td></td><td>-</td><td></td></tr></table></td>';
+                                }else{
+                                    EachRow += '<td data-id="' + data[k].RegionID + '" data-name="'+ data[k].areaid +'" id="CELLID' + data[k].areaid + "" + data[k].ChannelBrandID + '" onClick="passIDs(' + data[k].areaid + ',' + data[k].DemographicID + ',' + data[k].ChannelBrandID + ',\'' + data[k].AreaName + '\',\'' + data[k].TargetCode + '\',\''+ data[k].ChannelBrandName +'\',\''+ data[k].ChannelID +'\',\'' + data[k].CountryCode + '\',\'' + data[k].IsRegionRow + '\',\'' + data[k].RegionID + '\')">&#09;' + Percent + '</td>';
+                                }                                                                                        
+                                                                                                                                    
+                            }else{
+                                var percentvalue = ((parseFloat(data[k].CurrentValue.replace(/,/g, '')) - parseFloat(data[k].ReferenceValue.replace(/,/g, ''))) / parseFloat(data[k].ReferenceValue.replace(/,/g, ''))) * 100;
+                                var dataCurrent = parseFloat(data[k].CurrentValue.replace(/,/g, ''));
+                                var dataReference = parseFloat(data[k].ReferenceValue.replace(/,/g, ''));
+                                var unitDecimal = 3;
+                                
+                                if($('#unittype').val() == 4){
+                                    unitDecimal = 0;
+                                }                                
+
+                                for(var g in GetWeekRanges){
+                                    if(data[k].areaid == GetWeekRanges[g].AreaID && data[k].RegionID == GetWeekRanges[g].RegionID){                                        
+                                        if($('#periodtype').val() == 1){
+                                            MinDateNumber = GetWeekRanges[g].MinWeekNumber;
+                                            MaxDateNumber = GetWeekRanges[g].MaxWeekNumber;
+                                        }else{                                            
+                                            MaxDateNumber = GetWeekRanges[g].MaxWeekNumber;
+                                            MinDateNumber = GetMaxMinDate(GetYearNum(GetWeekRanges[g].MinWeekNumber),GetWeekNum(GetWeekRanges[g].MinWeekNumber),$('#periodtype').val());
+                                            MaxDateNumber = GetMaxMinDate(GetYearNum(GetWeekRanges[g].MaxWeekNumber),GetWeekNum(GetWeekRanges[g].MaxWeekNumber),$('#periodtype').val());                                                                                   
+                                        } 
+                                    }
+                                }
+                                if($('#periodType').val() != 4 && $('#refperiod').val() != -1){
+                                    classifyMin = (MinDateNumber > minrefperiods) ? "yes" : "no";
+                                    classifyMax = (maxrefperiods > MaxDateNumber) ? "yes" : "no";
+                                }else{
+                                    classifyMin = 'no';
+                                    classifyMax = 'no';
+                                }                                
+
+
+                                if (data[k].ReferenceValue == 0 || (classifyMin == "yes" && classifyMax == "yes")) {
+                                    if(data[k].CurrentValue == 0){
+                                        EachRow += '<td><table id="hiddenTable"><tr><td></td><td>-</td><td></td></tr></table></td>'
+                                    }else{
+                                        if($('#unittype').val() == 4){
+                                            var unitDecimal = 0;
+                                        }else{
+                                            var unitDecimal = 3;
+                                        }
+                                        var dataCurrent = parseFloat(data[k].CurrentValue.replace(/,/g, ''));                                       
+                                        EachRow += '<td>'+ dataCurrent.toFixed(unitDecimal) +PercentTag+ ' (N/A)*' +'</td>';
+                                    }                                    
+                                }else{
+                                    //alert($('#period').val() > MaxDateNumber ? "yes" : "no");
+                                    if( $('#periodType').val() != 4 && $('#refperiod').val() != -1 ){
+                                        classifyMin = (MinDateNumber > minrefperiods) ? "yes" : "no";                                    
+                                        if($('#periodtype').val() != 1){
+                                            classifyNA = GetMaxMinDate(GetYearNum($('#period').val()),GetWeekNum($('#period').val()),$('#periodtype').val(),'max') > MaxDateNumber ? "yes" : "no";
+                                            //alert(GetMaxMinDate(GetYearNum($('#period').val()),GetWeekNum($('#period').val()),$('#periodtype').val(),'max') + "/" + MaxDateNumber + "/" + classifyNA);                                        
+                                        }else{
+                                            classifyNA = $('#period').val() > MaxDateNumber ? "yes" : "no";
+                                            //alert($('#period').val() + "/" + MaxDateNumber + "/" + classifyNA);
+                                        }
+                                    }else{
+                                        classifyMin = 'no';
+                                        classifyNA = 'no';
+                                    }
+                                    
+                                    if(classifyMin == "yes" || classifyNA == "yes"){
+                                        EachRow += '<td data-id="' + data[k].RegionID + '" data-name="'+ data[k].areaid +'" id="CELLID' + data[k].areaid + "" + data[k].ChannelBrandID + '" onClick="passIDs(' + data[k].areaid + ',' + data[k].DemographicID + ',' + data[k].ChannelBrandID + ',\'' + data[k].AreaName + '\',\'' + data[k].TargetCode + '\',\''+ data[k].ChannelBrandName +'\',\''+ data[k].ChannelID +'\',\'' + data[k].CountryCode + '\',\'' + data[k].IsRegionRow + '\',\'' + data[k].RegionID + '\')">(N/A)!</td>';
+                                        DeductCurrentRefValue.push({id:data[k].ChannelBrandID,CurrentValue:data[k].CurrentValue,ReferenceValue:data[k].ReferenceValue});                                                                                                    
+                                    }else{
+                                        if (percentvalue > 0) {
+                                        EachRow += '<td data-id="' + data[k].RegionID + '" data-name="'+ data[k].areaid +'" id="CELLID' + data[k].areaid + "" + data[k].ChannelBrandID + '" onClick="passIDs(' + data[k].areaid + ',' + data[k].DemographicID + ',' + data[k].ChannelBrandID + ',\'' + data[k].AreaName + '\',\'' + data[k].TargetCode + '\',\''+ data[k].ChannelBrandName +'\',\''+ data[k].ChannelID +'\',\'' + data[k].CountryCode + '\',\'' + data[k].IsRegionRow + '\',\'' + data[k].RegionID + '\')"><table id="hiddenTable"><tr><td>'+ dataCurrent.toFixed(unitDecimal) +PercentTag+ '</td><td>&#09;<img id="arrow_up" src="icons/bullets/arrow_up.png"/></td><td>' + dataReference.toFixed(unitDecimal) + '</td></tr></table></td>';
+                                        } else {
+                                            EachRow += '<td data-id="' + data[k].RegionID + '" data-name="'+ data[k].areaid +'" id="CELLID' + data[k].areaid + "" + data[k].ChannelBrandID + '" onClick="passIDs(' + data[k].areaid + ',' + data[k].DemographicID + ',' + data[k].ChannelBrandID + ',\'' + data[k].AreaName + '\',\'' + data[k].TargetCode + '\',\''+ data[k].ChannelBrandName +'\',\''+ data[k].ChannelID +'\',\'' + data[k].CountryCode + '\',\'' + data[k].IsRegionRow + '\',\'' + data[k].RegionID + '\')"><table id="hiddenTable"><tr><td>'+ dataCurrent.toFixed(unitDecimal) +PercentTag+ '</td><td>&#09;<img id="arrow_down" src="icons/bullets/arrow_down.png"/></td><td>' + dataReference.toFixed(unitDecimal) + '</td></tr></table></td>';
+                                        }
+                                        for(var globalid in GlobalFlags){
+                                            //GlobalFlags.push({channelBrandID:ChannelBrandIDs[i],RowCount:AreaIDs.length});
+                                            if(GlobalFlags[globalid].channelBrandID == data[k].ChannelBrandID){
+                                                var tempRowCout = GlobalFlags[globalid].RowCount;
+                                                GlobalFlags[globalid].RowCount = tempRowCout - 1;                                                
+                                            }
+                                        }    
+                                    }                                                                    
+                                }                                                                                        
+
+                                }
+                            }                            
+                            break;
+                        }
+                    }
+
+
+                    if (EachChannel.length === 0) {
+                        EachRow += '<td>-</td>';
+                    }
+
+
+                }
+                output += '<tr>' + EachRow + '</tr>';                
+            }            
+            var MinWeek = GetWeekRanges[0].MinWeekNumber, MaxWeek = GetWeekRanges[0].MaxWeekNumber;            
+            for(var i in AreaIDs){
+                for(var g in GetWeekRanges){
+                    if(AreaIDs[i] == GetWeekRanges[g].AreaID){
+                        if($('#periodtype').val() == 1){
+                            if(MinWeek < GetWeekRanges[g].MinWeekNumber){
+                                MinWeek = GetWeekRanges[g].MinWeekNumber;
+                            }
+                            if(MaxWeek > GetWeekRanges[g].MaxWeekNumber){
+                                MaxWeek = GetWeekRanges[g].MaxWeekNumber;
+                            }                            
+                        }else{
+                            if(MinWeek < GetWeekRanges[g].MinWeekNumber){
+                                MinWeek = GetMaxMinDate(GetYearNum(GetWeekRanges[g].MinWeekNumber),GetWeekNum(GetWeekRanges[g].MinWeekNumber),$('#periodtype').val());
+                            }
+                            if(MaxWeek > GetWeekRanges[g].MaxWeekNumber){
+                                MaxWeek = GetMaxMinDate(GetYearNum(GetWeekRanges[g].MaxWeekNumber),GetWeekNum(GetWeekRanges[g].MaxWeekNumber),$('#periodtype').val());     
+                            }                                                                                                    
+                        } 
+                    }                    
+                }
+            }                        
+            //alert(MinWeek + "/" + MaxWeek + "/" + AreaIDs);
+            for (var x = 0; x < RegionIDs.length; x++) {
+                        var EachRow = '';                        
+                        for (var n = 0; n < ChannelBrandIDs.length; n++) {
+                            var EachChannel = '';                            
+                            for (var m = 0; m < data.length; m++) {
+                                var RegionIDnum = RegionIDs[x];                            
+                                var ChannelBrandID = ChannelBrandIDs[n];                                                                
+                                if ((EachRow.length === 0) && (data[m].RegionID == RegionIDnum)) {                                    
+                                    EachRow += '<td class="1"><img id="regionRow" src="icons/Area Icons/'+ data[m].Regionname +'.png"/><small>'+ data[m].Regionname +'</small></td>';                                                                                           
+                                }
+
+                                if( data[m].RegionID == RegionIDnum && data[m].ChannelBrandID == ChannelBrandID && data[m].IsRegionRow == 1){
+                                    EachChannel = 'found';
+                                    var DeductCurrent = 0, DeductReference = 0;                                    
+                                    if (localStorage["ValueFormatPercent"] == 1) {
+                                        //DeductCurrentRefValue.push({id:data[k].ChannelBrandID,CurrentValue:data[k].CurrentValue,ReferenceValue:data[k].ReferenceValue});                                        
+                                        for(var deductid in DeductCurrentRefValue){
+                                            if(data[m].ChannelBrandID == DeductCurrentRefValue[deductid].id){
+                                                DeductCurrent = Number(DeductCurrent) + Number(DeductCurrentRefValue[deductid].CurrentValue);
+                                                DeductReference = Number(DeductReference) + Number(DeductCurrentRefValue[deductid].ReferenceValue);
+                                            }                                                    
+                                        }
+                                        //alert(Number(DeductCurrent) + "/" + Number(DeductReference));
+
+                                        if (data[m].ReferenceValue == 0) {
+                                            if(data[m].CurrentValue == 0){
+                                                Percent = '-';
+                                            }else{
+                                                Percent = ( Number(data[m].CurrentValue) - Number(DeductCurrent) ) +PercentTag+ ' (N/A)*';
+                                            }                                    
+                                        } else {
+                                            //var percentvalue = ((parseFloat(data[m].CurrentValue.replace(/,/g, '')) - parseFloat(data[m].ReferenceValue.replace(/,/g, ''))) / parseFloat(data[m].ReferenceValue.replace(/,/g, ''))) * 100;                                    
+                                            var dataCurrent = parseFloat(data[m].CurrentValue.replace(/,/g, '')) - Number(DeductCurrent);
+                                            var dataReference = parseFloat(data[m].ReferenceValue.replace(/,/g, '')) - Number(DeductReference);
+                                            var percentvalue = ((parseFloat(data[m].CurrentValue.replace(/,/g, '')) - parseFloat(data[m].ReferenceValue.replace(/,/g, ''))) / parseFloat(data[m].ReferenceValue.replace(/,/g, ''))) * 100;
+                                            var decimalNum = 1;
+                                            var unitDecimal = 3;
+                                                                                    
+                                            if($('#unittype').val() == 4){
+                                                unitDecimal = 0;
+                                            }
+                                            for(var globalFlagid in GlobalFlags){                                                
+                                                if(GlobalFlags[globalFlagid].channelBrandID == data[m].ChannelBrandID){                                                                                                    
+                                                    if(GlobalFlags[globalFlagid].RowCount == AreaIDs.length){
+                                                        Percent = '<table id="hiddenTable"><tr><td></td><td>-</td><td></td></tr></table>';
+                                                    }else{
+                                                        if (percentvalue > 0) {
+                                                            Percent = '<table id="hiddenTable"><tr><td>'+ dataCurrent.toFixed(unitDecimal) +PercentTag+ '</td><td>&#09;<img id="arrow_up" src="icons/bullets/arrow_up.png"/></td><td>' + percentvalue.toFixed(decimalNum) + '%</td></tr></table>';
+                                                        } else {
+                                                            Percent = '<table id="hiddenTable"><tr><td>'+ dataCurrent.toFixed(unitDecimal) +PercentTag+ '</td><td>&#09;<img id="arrow_down" src="icons/bullets/arrow_down.png"/></td><td>' + percentvalue.toFixed(decimalNum) + '%</td></tr></table>';
+                                                        }
+                                                    }
+                                                }
+                                            }                                                                                                                        
+                                        }
+                 
+                                        if(Percent == '-'){
+                                            EachRow += '<td><table id="hiddenTable"><tr><td></td><td>-</td><td></td></tr></table></td>';
+                                        }else{
+                                            if(localStorage["UnitID"] != 3){                                                
+                                                EachRow += '<td id="GLOBALID' + data[m].RegionID + "" + data[m].ChannelBrandID + '" onClick="passIDs(' + data[m].areaid + ',' + data[m].DemographicID + ',' + data[m].ChannelBrandID + ',\'' + data[m].AreaName + '\',\'' + data[m].TargetCode + '\',\''+ data[m].ChannelBrandName +'\',\''+ data[m].ChannelID +'\',\'' + data[m].CountryCode + '\',\'' + data[m].IsRegionRow + '\',\'' + data[m].RegionID + '\')">&#09;' + Percent + '</td>';
+                                            }else{
+                                                EachRow += '<td>-</td>';
+                                            }                                            
+                                        }
+                                                                                
+                                    }else{                                        
+                                        for(var deductid in DeductCurrentRefValue){
+                                            if(data[m].ChannelBrandID == DeductCurrentRefValue[deductid].id){
+                                                DeductCurrent = Number(DeductCurrent) + parseFloat(DeductCurrentRefValue[deductid].CurrentValue.replace(/,/g, ''));
+                                                DeductReference = Number(DeductReference) + parseFloat(DeductCurrentRefValue[deductid].ReferenceValue.replace(/,/g, ''));
+                                            }                                                    
+                                        }
+                                        
+                                        //alert(Number(DeductCurrent) + "/" + Number(DeductReference));
+
+                                        var percentvalue = ((parseFloat(data[m].CurrentValue.replace(/,/g, '')) - parseFloat(data[m].ReferenceValue.replace(/,/g, ''))) / parseFloat(data[m].ReferenceValue.replace(/,/g, ''))) * 100;
+                                        var dataCurrent = Number(parseFloat(data[m].CurrentValue.replace(/,/g, ''))) - Number(DeductCurrent);
+                                        var dataReference = Number(parseFloat(data[m].ReferenceValue.replace(/,/g, ''))) - Number(DeductReference);
+                                        var unitDecimal = 3;
+                                        
+                                        if($('#unittype').val() == 4){
+                                            unitDecimal = 0;
+                                        }                                
+
+                                        if (data[m].ReferenceValue == 0) {
+                                            if(localStorage["UnitID"] != 3){
+                                                if(data[m].CurrentValue == 0){
+                                                EachRow += '<td><table id="hiddenTable"><tr><td></td><td>-</td><td></td></tr></table></td>'
+                                                }else{
+                                                    EachRow += '<td>'+ (Number(data[m].CurrentValue) - Number(DeductCurrent)) +PercentTag+ ' (N/A)*' +'</td>';
+                                                }
+                                            }else{
+                                                EachRow += '<td>-</td>';
+                                            }                                                                                
+                                        }else{
+                                            if(localStorage["UnitID"] != 3){
+                                                for(var globalFlagid in GlobalFlags){                                                
+                                                    if(GlobalFlags[globalFlagid].channelBrandID == data[m].ChannelBrandID){                                                                                                        
+                                                        if(GlobalFlags[globalFlagid].RowCount == AreaIDs.length){
+                                                            EachRow += '<td><table id="hiddenTable"><tr><td></td><td>-</td><td></td></tr></table></td>';
+                                                        }else{
+                                                            if (percentvalue > 0) {
+                                                                EachRow += '<td id="GLOBALID' + data[m].RegionID + "" + data[m].ChannelBrandID + '" class="GTAMsource" onClick="passIDs(' + data[m].areaid + ',' + data[m].DemographicID + ',' + data[m].ChannelBrandID + ',\'' + data[m].AreaName + '\',\'' + data[m].TargetCode + '\',\''+ data[m].ChannelBrandName +'\',\''+ data[m].ChannelID +'\',\'' + data[m].CountryCode + '\',\'' + data[m].IsRegionRow + '\',\'' + data[m].RegionID + '\')"><table id="hiddenTable"><tr><td>'+ dataCurrent.toFixed(unitDecimal) +PercentTag+ '</td><td>&#09;<img id="arrow_up" src="icons/bullets/arrow_up.png"/></td><td>' + dataReference.toFixed(unitDecimal) + '</td></tr></table></td>';
+                                                            } else {
+                                                                EachRow += '<td id="GLOBALID' + data[m].RegionID + "" + data[m].ChannelBrandID + '" class="GTAMsource" onClick="passIDs(' + data[m].areaid + ',' + data[m].DemographicID + ',' + data[m].ChannelBrandID + ',\'' + data[m].AreaName + '\',\'' + data[m].TargetCode + '\',\''+ data[m].ChannelBrandName +'\',\''+ data[m].ChannelID +'\',\'' + data[m].CountryCode + '\',\'' + data[m].IsRegionRow + '\',\'' + data[m].RegionID + '\')"><table id="hiddenTable"><tr><td>'+ dataCurrent.toFixed(unitDecimal) +PercentTag+ '</td><td>&#09;<img id="arrow_down" src="icons/bullets/arrow_down.png"/></td><td>' + dataReference.toFixed(unitDecimal) + '</td></tr></table></td>';
+                                                            }
+                                                        }
+                                                    }
+                                                }                                                 
+                                            }else{
+                                                EachRow += '<td>-</td>';
+                                            }                                                                                       
+                                        }   
+                                    }
+                                    break;
+                                }                                
+                            }
+                            if (EachChannel.length === 0) {
+                                EachRow += '<td>-</td>';
+                            }
+                        }
+                        output += '<tr onclick="GTAMsource()">' + EachRow + '</tr>';
+                    }
+            output += '</table><small id="TAMsource"></small><small id="disclaimer">(N/A)* = No data/Insufficent data for comparison period<br/>(N/A)! = Selected period'+"'"+'s data not in yet</small>';                    
+            $('#performancecontent').html(output);        
+
+            var cellid = "CELLID" + localStorage["AreaID"] + "" + localStorage["ChannelBrandID"];
+            if(localStorage["IsRegionRow"] ==0){
+                $("#" + cellid).css("fontWeight", "bolder");
+                $("#" + cellid).css("border", "2px solid #000");
+                $("#" + cellid).css("backgroundColor", "#F7F7F7");
+            }                    
+
+            localStorage['CELLIDs'] = cellid;
+
+            var cellid2 = "GLOBALID" + localStorage["RegionID"] + "" + localStorage["ChannelBrandID"];
+            if(localStorage["IsRegionRow"] ==1){
+                $("#" + cellid2).css("fontWeight", "bolder");
+                $("#" + cellid2).css("border", "2px solid #000");
+                $("#" + cellid2).css("backgroundColor", "#F7F7F7");            
+            }            
+
+            localStorage['GLOBALIDs'] = cellid2;
+            //Dateline for Reach                    
+             
+            PopulateSections();            
+            ratingsWidth = document.getElementById("performancecontent").offsetWidth;
+            $('#RatingsTable').css("width",'100%');
+            $('#RatingsTable th img').css("width",'100px');
+            $('#RatingsTable th img').css("height","40px");
+            //var imageWidth = document.getElementById("logo").offsetWidth;            
+            //$('#RatingsTable th img').css("height",((imageWidth / 10) * 4) + "px");
+            $('#RatingsTable th:first-child img').css("width",'35px');
+            $('#RatingsTable th:first-child img').css("height",'35px');
+            $('#RatingsTable th,#RatingsTable td').css("padding",'1px 1px 1px 1px');
+            $('#RatingsTable td').css("padding",'0.5% 1px 0.5% 1px');
+            $('#RatingsTable td:first-child img').css("width","30px"); 
+
+
+            $("#RatingsTable tr td").each(function() {                
+                if($(this).data("id") != undefined && $(this).data("name") != undefined && $("#period")[0].selectedIndex == 0 && ($('#unittype').val() == 4 || $('#unittype').val() == 5)){
+                    var RegionID = $(this).data("id");
+                    var AreaID = $(this).data("name");
+                    var date = AppendAreaDateline(RegionID,AreaID)
+                    $(this).attr('data-tooltip',date);  
+                }    
+            });                       
+        })
+        .fail(function() {
+            alert("Ajax failed to fetch data");
+        });        
+}
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+        .input-sm{                                    
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+                    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+                 -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+                    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        }
+        html, body {
+          height: 100%;
+        }
+        body {        
+          background-color: rgb(247, 247, 247);            
+        }
+        .main_container{            
+            background-color: rgb(247, 247, 247);            
+            padding-top: 1%;
+            padding-bottom: 1%;          
+        }        
+        .selectlbl{
+          font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-variant: normal;
+          font-weight: 500;
+          line-height: 26.4px;
+          text-align: center;         
+        }
+        .selectlbl2{
+          font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-variant: normal;
+          font-weight: 500;
+          line-height: 26.4px;
+                 
+        }
+        select{
+            display: block;
+        }
+        #performancecontent{
+          height: 430px;                   
+        }

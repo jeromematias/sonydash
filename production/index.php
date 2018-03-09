@@ -1,0 +1,1 @@
+<?php header("Location:http://techedgedashboard.grouptechedge.com/scripps_dash/production/dashboard.php"); ?>

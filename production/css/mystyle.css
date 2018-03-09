@@ -1,0 +1,157 @@
+        .demo1 {
+            position: relative;
+            width: 20vw;
+            height: 20vw;
+            box-sizing: border-box;
+            float:left;
+            margin:20px
+        }   
+        select {
+          
+        }        
+        label {
+          font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-variant: normal;
+          font-weight: 500;
+          line-height: 26.4px;
+          text-align: center;         
+        }
+        #piecharttable, #gauge1table, #gauge2table, #gauge3table, #gauge4table{
+          
+          width: 100%;
+        }
+        .x_content #datatable td{
+          width: 300px;
+        }      
+        .main_container{
+          background-color: rgb(247, 247, 247);
+          padding-left: 2%;
+          padding-right: 2%; 
+        } 
+        .x_content select{
+          height: 20px;
+        }       
+        .x_panel small{
+          color: #666;
+          font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+        }
+        .x_content #datatable, #myTab1{
+          font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+        }
+        body{
+          background-color: rgb(247, 247, 247);          
+        }        
+        .x_content .table{
+          text-align: center;
+          height: 100%;          
+        }
+        #bargraph h2{
+          font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-variant: normal;
+        }
+        #bargraph a{
+          font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+          font-size: 12px;
+          font-style: normal;
+          font-variant: normal;
+        }
+        .table{
+          font-size: 12px;
+        }
+        .table tr:first-child{        
+          opacity: 100%;
+        }        
+        input::-webkit-input-placeholder {
+        font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+        font-size: 14px;
+        letter-spacing: 2px;
+        text-align: center;
+        }
+        .headtitle{            
+            cursor:pointer;
+        }
+        .members{}        
+        .blips {
+            color:red;
+        }
+        .crudz {
+            color:blue;
+        }
+        .satin-flings {
+            color:rgb(213, 194, 0);
+        }
+        td {
+            padding-right:10px;
+            padding-left:10px;
+        }
+        #myForm{
+          float: right;          
+          width: auto;
+        }
+        #date{
+          font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+          font-size: 14px;          
+          text-align: right;
+        }
+        #autodate{
+          font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+          font-size: 14px;          
+          text-align: right;
+          height: 26px; 
+        }
+        #tablenames{
+          font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+          font-size: 14px;          
+          text-align: right;
+          height: 26px;
+          min-width: 100px;
+        }
+        input::-webkit-input-placeholder {
+        font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+        font-size: 14px;
+        letter-spacing: 4px;
+        text-align: center;
+        color: #333;
+        }
+        
+ .demo1 {
+            position: relative;
+            width: 20vw;
+            height: 20vw;
+            box-sizing: border-box;
+            float:left;
+            margin:20px
+        }   
+  #myForm{
+          float: right;          
+          width: auto;
+        }
+        #date{
+          font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+          font-size: 14px;          
+          text-align: right;
+        }
+        #datanum{
+          font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+          font-size: 14px;          
+          text-align: right;
+          height: 26px; 
+        }
+        #tablenames{
+          font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+          font-size: 14px;          
+          text-align: right;
+          height: 26px;
+          min-width: 100px;
+        }
+        input::-webkit-input-placeholder {
+        font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+        font-size: 14px;
+        letter-spacing: 4px;
+        text-align: center;
+        color: #333;
+        }           

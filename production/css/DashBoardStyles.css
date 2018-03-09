@@ -1,0 +1,306 @@
+/*please put all style here */
+
+.input-sm{                                    
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+                    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+                 -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+                    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        }
+        html, body {
+          height: 100%;
+        }
+        body {        
+          background-color: rgb(247, 247, 247);            
+        }
+        .main_container{            
+            background-color: rgb(247, 247, 247);            
+            padding-top: 0%;
+            padding-bottom: 1%;          
+        }        
+        .selectlbl{
+          font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-variant: normal;
+          font-weight: 500;
+          line-height: 26.4px;
+          text-align: center;
+          padding: 0px 0px 0px 0px;         
+        }
+        .selectlbl2{
+          font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-variant: normal;
+          font-weight: 500;          
+                 
+        }        
+        #topnav{            
+            padding: 0px 0px 0px 0px;
+            height: 70px;
+        }
+        .selectlbl #radiobuttons{
+            display: block;
+            border: 1px solid #C0C0C0;
+            border-radius: 5px;
+            height: 30px;
+        }
+        #dashboardForm select{
+            display: block;
+            height: 30px;
+            padding: 0px 0px 0px 0px;
+        }
+
+        #performancecontent, #topprogrammescontent{
+            height: 400px;
+        }        
+        #bargraph, #graphtable{
+            height: 200px;
+            padding-top: 8px;            
+        }
+        #dashboardForm{
+            margin: 0 auto;          
+            width: 850px;
+            padding: 0px 0px 0px 0px;            
+        }
+        .alabel{            
+            display: block;
+            text-decoration: none;
+        }
+        .table,#datatable-buttons{
+            font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+            line-height: 22.4px;            
+        }
+        .table .bg-success{
+            background-color: #C5E0B4;
+            border: 1px solid #C5E0B4;
+        }
+        .table .bg-danger{
+            background-color: #FFB3B3;
+            border: 1px solid #FFB3B3;
+        }
+        .table .bg-warning{
+            background-color: #F0AD4E;
+            border: 1px solid #F0AD4E;
+        }        
+        .table tr{
+            
+        }
+        .modal {
+            display:    none;
+            position:   fixed;
+            z-index:    1000;
+            top:        0;
+            left:       0;
+            height:     100%;
+            width:      100%;
+            background: #fff 
+                        url('../images/progress.gif') 
+                        50% 50% 
+                        no-repeat;
+        }        
+        body.loading {
+            overflow: hidden;   
+        }
+        body.loading .modal {
+            display: block;
+        }
+        #target{
+            width: 100px;
+        }
+        #refperiod{
+            width: 80px;
+        }
+        #flag{            
+            width: 20px;
+            height: 20px;                                    
+            border-right:none;
+        }        
+        #performancecontent, #topprogrammescontent{
+            /*overflow-y: auto;*/
+        }
+        #performancecontent::-webkit-scrollbar-track, #topprogrammescontent::-webkit-scrollbar-track
+        {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            background-color: #F5F5F5;
+        }
+
+        #performancecontent::-webkit-scrollbar, #topprogrammescontent::-webkit-scrollbar
+        {
+            width: 6px;
+            background-color: #F5F5F5;
+        }
+
+        #performancecontent::-webkit-scrollbar-thumb, #topprogrammescontent::-webkit-scrollbar-thumb
+        {
+            background-color: #999;
+        }
+
+        #myTab1 a{
+            display: block;
+            color: #333;
+            font-size:12px;
+        }
+        .footer{
+            font-size: 10px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+        }
+        #datatable-buttons th{
+            padding: 0px 0px 0px 0px;
+        }
+        #datatable-buttons td{
+            font-size: 11px;
+            cursor: pointer;            
+            vertical-align: middle;
+        }
+        #datatable-buttons td::first-child{
+            width: 200px;
+            text-align: left;            
+        }
+        #datatable-buttons th img{
+            margin: 0 auto;
+        }        
+        #datatable-buttons td img{
+            border: 1px solid #333;
+            margin-right: 5px;
+            margin-top: -7px;
+            margin-bottom: -7px;
+        }                
+        #topprogflag{
+            width: 28px;
+            height: 28px;                        
+        }
+        #topproglogo{
+            margin: 0px auto;
+            height: 24px;
+            width: 35px;            
+        }
+        .btn-topprogflag{
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+        .btn-toplogo{
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+        #globe{
+            margin: 0 auto;            
+            height: 35px;
+            width: 35px;            
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        #logo{
+            margin: 0px auto;
+            height: 40px;
+            width: 100px;            
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        #ratingstitle{
+            margin: 0 auto;
+            font-size: 22px;
+            width: 200px;
+            font-weight: bolder;
+            margin-bottom: -8px;
+            padding-bottom: 0px;
+        }
+        #chartlogo{
+            margin: 0 auto;
+            height: 55px;
+            width: 80px;                        
+            display: block;
+            margin-left: auto;
+            margin-right: auto;            
+        }                
+        #areaflag{
+            margin: 0 auto;
+            height: 40px;
+            width: 40px; 
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+        }        
+        #bullets{            
+            height:12px;
+            width: 12px;
+            margin-left: 60px;
+            margin-right: 10px;            
+        }
+        #dbullet1{
+            margin-top: 20px;
+            font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+        }
+        #dbullet2{
+            margin-top:10px;
+            font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+        }        
+        #flaglogo h3{            
+            font-weight:bold;
+            text-transform: capitalize;
+            text-align: center;            
+            font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+            margin-top: 100px;
+        }
+        #xaxislabel{
+            margin-top: 5px;
+            text-align: center;            
+            font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;            
+        }
+        #xaxislabel h3{
+            font-weight: bolder;
+            font-size: 18px;
+        }
+        #channelbrand1{
+            font-size: 10px;
+        }
+        #globalTitle, #globaltotal{
+            font-size: 12px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        #globaltotal{
+            text-align: right;
+            font-weight: bolder;                        
+            text-align: center;
+            height: 30px;
+        }
+        .sidebar{
+            margin: 0 auto;
+            margin-top: 35px;            
+        }
+        .sidebar small{
+            margin: 0 auto;
+            display: block;
+            font-weight: bold;
+            margin-top: 15px;            
+        }
+        .x_panel{
+             padding: 0px 0px 0px 0px;
+             margin-top: 0px;        
+        }
+        .col{
+            margin-top: 0px;
+        }
+        #performancecontent, #topprogrammescontent{
+            padding-top: 0px;
+        }
+        .valform{
+            margin: 0px auto;
+            width: 130px;            
+        }
+		
