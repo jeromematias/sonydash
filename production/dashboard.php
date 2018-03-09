@@ -955,7 +955,7 @@
         <div class="x_panel">
             <div id="ratingstitle"><small id="">Ratings Performance</small></div>
             <div class="x_content">
-                <div id="performancecontent table-responsive"></div>
+                <div id="performancecontent" class="table-responsive"></div>
             </div>
         </div>
     </div>
