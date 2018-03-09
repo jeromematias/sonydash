@@ -871,6 +871,9 @@
     table#TableIndividual{
         z-index: 1000;
     }
+    .x_panel .x_content .tabpanel .tab-content #TabIndividual{
+        height: 100%;
+    }
     #TabIndividual{
         height: 100%;
         overflow-y: auto;
