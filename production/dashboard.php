@@ -1153,6 +1153,8 @@
         InitializeDashboardInpouts();
         getModal();
         disableOptions(1);
+        var $table = $('table#TableIndividual');
+        $table.floatThead();
     });
     var UpdateWarning1 = false,
         UpdateWarning2 = false;
