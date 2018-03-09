@@ -880,7 +880,6 @@
     #tbsection .x_panel .x_content .tabpanel .tab-content #TabIndividual{
         height: calc( 100% - 20px );
         overflow-y: auto;
-
     }
 
 </style>
