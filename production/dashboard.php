@@ -877,24 +877,29 @@
     #tbsection .x_panel .x_content .tabpanel .tab-content{
         height: 100%;             
     }
-    #tbsection .x_panel .x_content .tabpanel .tab-content #TabIndividual{
+    #tbsection .x_panel .x_content .tabpanel .tab-content #TabIndividual,
+    #tbsection .x_panel .x_content .tabpanel .tab-content#TabGrouped,
+    #tbsection .x_panel .x_content .tabpanel .tab-content #TabMax{
         height: calc( 100% - 100px );
         overflow-y: auto;
     }
-    #TabIndividual::-webkit-scrollbar-track
+    #TabIndividual::-webkit-scrollbar-track, #TabGrouped::-webkit-scrollbar-track, #TabMax::-webkit-scrollbar-track
     {
       background-color: #F5F5F5;
     }
 
-    #TabIndividual::-webkit-scrollbar
+    #TabIndividual::-webkit-scrollbar,
+    #TabGrouped::-webkit-scrollbar,
+    #TabMax::-webkit-scrollbar
     {
       width: 8px;
       background-color: #F5F5F5;
     }
 
-    #TabIndividual::-webkit-scrollbar-thumb
+    #TabIndividual::-webkit-scrollbar-thumb,
+    #TabGrouped::-webkit-scrollbar-thumb,
+    #TabMax::-webkit-scrollbar-thumb
     {
-
       background-color: #888;
     }
 </style>
