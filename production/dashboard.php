@@ -872,7 +872,8 @@
         z-index: 1000;
     }
     #tb-individual{
-        overflow-y: scroll;
+        height: 100%;
+        overflow-y: auto;
     }
 </style>
 
