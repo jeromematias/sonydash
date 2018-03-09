@@ -1143,9 +1143,7 @@
     var browserIsIE = !(window.ActiveXObject) && "ActiveXObject" in window;
     var ratingsDefaultHeight = document.getElementById("performancecontent").offsetHeight;
     var GraphDefaultWidth = document.getElementById("bargraph").offsetWidth;
-    var ratingsWidth = 0;
-    var $table = $('table#TableIndividual');
-    $table.floatThead();
+    var ratingsWidth = 0;    
     $(document).ready(function() {
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             window.location.replace('../scripps_mobile/dashboard/index.php')
