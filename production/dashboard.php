@@ -868,6 +868,9 @@
         overflow-y: auto;
         overflow-x: hidden;
     }
+    table#TableIndividual{
+        z-index: 1000;
+    }
 </style>
 
 <body>
@@ -982,8 +985,8 @@
                             <div class="alert alert-warning">
                                 <strong>Note : </strong><small id="alert-content"></small>
                             </div>
-                            <div class="table-responsive">
-                                <table class="table table-bordered table-striped" id="TableIndividual"></table>
+                            <div class="table-responsive" id="tb-individual">
+                                
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="TabGrouped" aria-labelledby="profile-tab">
@@ -1154,9 +1157,7 @@
         //getLastDate();
         InitializeDashboardInpouts();
         getModal();
-        disableOptions(1);
-        var $table = $('table#TableIndividual');
-        $table.floatThead();
+        disableOptions(1);        
     });
     var UpdateWarning1 = false,
         UpdateWarning2 = false;

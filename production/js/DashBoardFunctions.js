@@ -409,7 +409,7 @@ function GetTopUniquePrograms(TopProgramIndividualUnitID, TableIndex) {
         cache : false,
         success: function(data) {
             var sortNUmber = 0;                       
-            var output = '<thead><tr>' +
+            var output = '<table class="table table-bordered table-striped" id="TableIndividual"><thead><tr>' +
                 '<td>#</td>' +
                 '<td>Programme Title</td>' +
                 '<td>Date</td>';                
@@ -465,9 +465,11 @@ function GetTopUniquePrograms(TopProgramIndividualUnitID, TableIndex) {
                         }
                     }
                 }                
-                output += '</tr></body>';                
+                output += '</tr></body></table>';                
             }            
-            $("#TableIndividual").html(output);                        
+            $("#tb-individual").html(output);
+            var table = $('table#TableIndividual');
+            table.floatThead();                        
         }
     });
 }
