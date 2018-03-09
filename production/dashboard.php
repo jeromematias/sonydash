@@ -856,7 +856,6 @@
     }
     #tbsection{
         height: 400px;
-        border: 1px solid #000;
         padding: 0 15px 15px 15px;
     }
     #tbsection .x_panel{
