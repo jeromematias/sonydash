@@ -862,6 +862,9 @@
         height: 100%;
     }
     #tbsection .x_panel .x_content .tabpanel{
+        
+    }
+    #topProgContent .tab-pane{
         overflow-y: auto;
         overflow-x: hidden;
     }
