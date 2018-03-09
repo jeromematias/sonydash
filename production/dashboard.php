@@ -989,7 +989,7 @@
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="TabMax" aria-labelledby="max-tab">
                             <table class="table table-bordered table-striped" id="TableMax"></table>
-                        </div>
+                        </div>                        
                     </div>
                 </div>
                 <div id="RegionalRow"></div>
@@ -1135,6 +1135,7 @@
 <div class="modal">
     <!-- Place at bottom of page -->
 </div>
+<script src="js/jquery.floatThead.js"></script>
 <script type="text/javascript" src="js/DashBoardFunctions.js?v=5"></script>
 <script src="js/alasql.min.js"></script>
 <script src="js/xlsx.core.min.js"></script>
