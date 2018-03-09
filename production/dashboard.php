@@ -871,6 +871,9 @@
     table#TableIndividual{
         z-index: 1000;
     }
+    #tb-individual{
+        overflow-y: scroll;
+    }
 </style>
 
 <body>
