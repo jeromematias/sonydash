@@ -781,6 +781,7 @@
         min-height: 10px;
         height: auto;
         width: 100%;
+        overflow-y: auto;
     }
 
     #competitiveTable {
