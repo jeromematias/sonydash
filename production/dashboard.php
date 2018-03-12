@@ -908,6 +908,20 @@
     {
       background-color: #888;
     }
+    .competitivePanel::-webkit-scrollbar,
+    .competitivePanel::-webkit-scrollbar,
+    .competitivePanel::-webkit-scrollbar
+    {
+      width: 8px;
+      background-color: #F5F5F5;
+    }
+
+    .competitivePanel::-webkit-scrollbar-thumb,
+    .competitivePanel::-webkit-scrollbar-thumb,
+    .competitivePanel::-webkit-scrollbar-thumb
+    {
+      background-color: #888;
+    }
 </style>
 
 <body>
