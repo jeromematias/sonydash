@@ -878,12 +878,15 @@
     #tbsection .x_panel .x_content .tabpanel,
     #tbsection .x_panel .x_content .tabpanel .tab-content{
         height: 100%;             
-    }
-    #tbsection .x_panel .x_content .competitivePanel,
+    }    
     #tbsection .x_panel .x_content .tabpanel .tab-content #TabIndividual,
     #tbsection .x_panel .x_content .tabpanel .tab-content #TabGrouped,
     #tbsection .x_panel .x_content .tabpanel .tab-content #TabMax{
         height: calc( 100% - 100px );
+        overflow-y: auto;
+    }
+    #tbsection .x_panel .x_content .competitivePanel{
+        height: calc( 100% - 10px );
         overflow-y: auto;
     }
     #TabIndividual::-webkit-scrollbar-track, #TabGrouped::-webkit-scrollbar-track, #TabMax::-webkit-scrollbar-track
