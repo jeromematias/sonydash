@@ -886,7 +886,7 @@
         overflow-y: auto;
     }
     #tbsection .x_panel .x_content .competitivePanel{
-        height: calc( 100% - 10px );
+        height: calc( 100% - 50px );
         overflow-y: auto;
     }
     #TabIndividual::-webkit-scrollbar-track, #TabGrouped::-webkit-scrollbar-track, #TabMax::-webkit-scrollbar-track
