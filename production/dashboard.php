@@ -874,10 +874,12 @@
     }
     #tbsection .x_panel,
     #tbsection .x_panel .x_content,
+    #tbsection .x_panel .x_content .competitivePanel,
     #tbsection .x_panel .x_content .tabpanel,
     #tbsection .x_panel .x_content .tabpanel .tab-content{
         height: 100%;             
     }
+    #tbsection .x_panel .x_content .competitivePanel,
     #tbsection .x_panel .x_content .tabpanel .tab-content #TabIndividual,
     #tbsection .x_panel .x_content .tabpanel .tab-content #TabGrouped,
     #tbsection .x_panel .x_content .tabpanel .tab-content #TabMax{
